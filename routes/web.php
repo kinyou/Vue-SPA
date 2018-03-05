@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//把都有请求都此路由来渲染
+Route::any('{all}', function () {
+	dump(['name'=>'vue-spa:' . time()]);
+    return view('layouts.app');
+})->where(['all'=>'.*']);
