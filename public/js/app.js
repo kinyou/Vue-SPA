@@ -45667,13 +45667,17 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 var routes = [{
     path: '/',
-    component: __webpack_require__(61)
+    component: __webpack_require__(41)
 }, {
     path: '/about',
     component: __webpack_require__(44)
 }, {
     path: '/products',
     component: __webpack_require__(47)
+}, {
+    path: '/products/:productId',
+    name: 'detail',
+    component: __webpack_require__(61)
 }];
 
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({
@@ -45682,9 +45686,227 @@ var routes = [{
 }));
 
 /***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(42)
+/* template */
+var __vue_template__ = __webpack_require__(43)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\IndexComponent.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d48373fc", Component.options)
+  } else {
+    hotAPI.reload("data-v-d48373fc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Index Component mounted.');
+        axios.get('/api/products').then(function (response) {
+            console.log(response.data);
+        }).catch(function (response) {
+            console.log('error');
+        });
+    }
+});
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "jumbotron" }, [
+      _c("h1", [_vm._v("好好学习,天天向上!")]),
+      _vm._v(" "),
+      _c("p"),
+      _vm._v(" "),
+      _c(
+        "p",
+        [
+          _c(
+            "router-link",
+            {
+              staticClass: "btn btn-primary btn-lg",
+              attrs: { to: "/products", role: "button" }
+            },
+            [_vm._v("去赚钱")]
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row marketing" }, [
+      _c("div", { staticClass: "col-lg-6" }, [
+        _c("h4", [_vm._v("人之初性本善")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("性相近习相远")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("养不教父之过")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Maecenas sed diam eget risus varius blandit sit amet non magna."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-lg-6" }, [
+        _c("h4", [_vm._v("教不严师之惰")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("扬名声显父母")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum."
+          )
+        ]),
+        _vm._v(" "),
+        _c("h4", [_vm._v("光于前裕于后")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Maecenas sed diam eget risus varius blandit sit amet non magna."
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "footer" }, [
+      _c("p", [
+        _vm._v(
+          "本系统由Laravel Framework & Vue & Bootstarp3强力驱动 © 2018 Wechat : xingmaogou."
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-d48373fc", module.exports)
+  }
+}
+
+/***/ }),
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -45872,10 +46094,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
+        var _this = this;
+
         console.log('Product Component mounted.');
+
+        axios.get('/api/products').then(function (response) {
+            _this.products = response.data.data;
+            console.log(_this.products);
+        }).catch(function (response) {
+            console.log('error');
+        });
+    },
+    data: function data() {
+        return {
+            products: []
+        };
     }
 });
 
@@ -45887,32 +46127,51 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-          _c("div", { staticClass: "panel panel-default" }, [
-            _c("div", { staticClass: "panel-heading" }, [
-              _vm._v("Example Component")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "panel-body" }, [
-              _vm._v(
-                "\n                    I'm an product component!\n                "
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v("Example Component")
+          ]),
+          _vm._v(" "),
+          _c(
+            "ul",
+            { staticClass: "list-group" },
+            _vm._l(_vm.products, function(product, index) {
+              return _c(
+                "li",
+                { key: index, staticClass: "list-group-item" },
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: "/products/" + product.id } },
+                    [_vm._v(_vm._s(product.name))]
+                  ),
+                  _vm._v(" -\n                        "),
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: {
+                          name: "detail",
+                          params: { productId: product.id }
+                        }
+                      }
+                    },
+                    [_vm._v("1" + _vm._s(product.name))]
+                  )
+                ],
+                1
               )
-            ])
-          ])
+            })
+          )
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -45964,7 +46223,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources\\assets\\js\\components\\IndexComponent.vue"
+Component.options.__file = "resources\\assets\\js\\components\\DetailComponent.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -45973,9 +46232,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d48373fc", Component.options)
+    hotAPI.createRecord("data-v-40a32f85", Component.options)
   } else {
-    hotAPI.reload("data-v-d48373fc", Component.options)
+    hotAPI.reload("data-v-40a32f85", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -46007,36 +46266,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Index Component mounted.');
+        var _this = this;
+
+        console.log('About Component mounted.');
+
         axios.get('/api/products').then(function (response) {
-            console.log(response.data);
+            _this.products = response.data.data;
+            console.log(_this.products);
         }).catch(function (response) {
             console.log('error');
         });
@@ -46051,101 +46290,28 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "jumbotron" }, [
-      _c("h1", [_vm._v("好好学习,天天向上!")]),
-      _vm._v(" "),
-      _c("p"),
-      _vm._v(" "),
-      _c(
-        "p",
-        [
-          _c(
-            "router-link",
-            {
-              staticClass: "btn btn-primary btn-lg",
-              attrs: { to: "/products", role: "button" }
-            },
-            [_vm._v("去赚钱")]
-          )
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1)
-  ])
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row marketing" }, [
-      _c("div", { staticClass: "col-lg-6" }, [
-        _c("h4", [_vm._v("人之初性本善")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("性相近习相远")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("养不教父之过")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Maecenas sed diam eget risus varius blandit sit amet non magna."
-          )
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
+          _c("div", { staticClass: "panel panel-default" }, [
+            _c("div", { staticClass: "panel-heading" }, [
+              _vm._v("Example Component")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "panel-body" }, [
+              _vm._v(
+                "\n                    I'm an detail component!\n                "
+              )
+            ])
+          ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-lg-6" }, [
-        _c("h4", [_vm._v("教不严师之惰")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("扬名声显父母")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum."
-          )
-        ]),
-        _vm._v(" "),
-        _c("h4", [_vm._v("光于前裕于后")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Maecenas sed diam eget risus varius blandit sit amet non magna."
-          )
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("footer", { staticClass: "footer" }, [
-      _c("p", [
-        _vm._v(
-          "本系统由Laravel Framework & Vue & Bootstarp3强力驱动 © 2018 Wechat : xingmaogou."
-        )
       ])
     ])
   }
@@ -46155,7 +46321,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-d48373fc", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-40a32f85", module.exports)
   }
 }
 

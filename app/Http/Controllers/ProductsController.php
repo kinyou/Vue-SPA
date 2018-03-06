@@ -10,4 +10,8 @@ class ProductsController extends Controller
     public function index(){
     	return Product::paginate(10);
     }
+
+    public function show(Product $product) {
+    	return $product;
+    }
 }

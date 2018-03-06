@@ -28,7 +28,7 @@
                 </button>
 
                 <!-- router-link标签会生成超链接a -->
-                <router-link to="/" class="navbar-brand">Vue-SPA</router-link>
+                <router-link to="/" class="navbar-brand">Laravel-SPA</router-link>
 
             </div>
 

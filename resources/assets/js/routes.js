@@ -12,6 +12,11 @@ let routes = [
     {
         path : '/products',
         component : require('./components/ProductComponent')
+    },
+    {
+        path : '/products/:productId',
+        name:'detail',
+        component : require('./components/DetailComponent')
     }
 ];
 
