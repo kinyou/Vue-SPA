@@ -46266,6 +46266,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -46273,12 +46277,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         console.log('About Component mounted.');
 
-        axios.get('/api/products').then(function (response) {
-            _this.products = response.data.data;
-            console.log(_this.products);
+        axios.get('/api/products/' + this.$route.params.productId).then(function (response) {
+            _this.product = response.data;
+            console.log(_this.product);
         }).catch(function (response) {
             console.log('error');
         });
+    },
+    data: function data() {
+        return {
+            product: []
+        };
     }
 });
 
@@ -46290,32 +46299,41 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-md-8 col-md-offset-2" }, [
-          _c("div", { staticClass: "panel panel-default" }, [
-            _c("div", { staticClass: "panel-heading" }, [
-              _vm._v("Example Component")
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-12" }, [
+        _c("div", { staticClass: "panel panel-default" }, [
+          _c("div", { staticClass: "panel-heading" }, [
+            _vm._v(_vm._s(_vm.product.name))
+          ]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "list-group" }, [
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.product.introduction))
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "panel-body" }, [
-              _vm._v(
-                "\n                    I'm an detail component!\n                "
-              )
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.product.cost_price))
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.product.sell_price))
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.product.exchange_rate))
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-group-item" }, [
+              _vm._v(_vm._s(_vm.product.created_at))
             ])
           ])
         ])
       ])
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

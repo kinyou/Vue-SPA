@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
+	/**
+	 * 商品列表
+	 * @return mixed
+	 */
     public function index(){
-    	return Product::paginate(10);
+    	return Product::paginate(30);
     }
 
-    public function show(Product $product) {
-    	return $product;
+	/**
+	 * 商品详情
+	 * @param $id
+	 * @return mixed
+	 */
+    public function show($id) {
+    	return Product::findOrFail($id);
     }
 }

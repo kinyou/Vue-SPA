@@ -1,13 +1,17 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
+                    <div class="panel-heading">{{product.name}}</div>
 
-                    <div class="panel-body">
-                        I'm an detail component!
-                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">{{product.introduction}}</li>
+                        <li class="list-group-item">{{product.cost_price}}</li>
+                        <li class="list-group-item">{{product.sell_price}}</li>
+                        <li class="list-group-item">{{product.exchange_rate}}</li>
+                        <li class="list-group-item">{{product.created_at}}</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -19,14 +23,20 @@
         mounted() {
             console.log('About Component mounted.');
 
-            axios.get('/api/products')
+            axios.get('/api/products/' + this.$route.params.productId )
                 .then(response=>{
-                    this.products = response.data.data;
-                    console.log(this.products);
+                    this.product = response.data;
+                    console.log(this.product);
                 })
                 .catch(response=>{
                     console.log('error')
                 })
+        },
+
+        data(){
+            return {
+                product: []
+            };
         }
     }
 </script>
