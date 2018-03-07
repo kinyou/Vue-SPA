@@ -3,20 +3,20 @@ import VueRouter from 'vue-router';
 let routes = [
     {
         path : '/',
-        component : require('./components/IndexComponent')
+        component : require('./components/homes/IndexComponent')
     },
     {
         path : '/about',
-        component : require('./components/AboutComponent')
+        component : require('./components/homes/AboutComponent')
     },
     {
         path : '/products',
-        component : require('./components/ProductComponent')
+        component : require('./components/products/ListComponent')
     },
     {
         path : '/products/:productId',
         name:'detail',
-        component : require('./components/DetailComponent')
+        component : require('./components/products/DetailComponent')
     }
 ];
 

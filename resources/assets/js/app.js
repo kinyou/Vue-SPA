@@ -12,6 +12,11 @@ window.Vue = require('vue');
 //导入vue-router
 import VueRouter from 'vue-router';
 import router from './routes';
+//导入公共的导航条组件
+import AppHeader from './components/common/NavbarComponent'
+
+//有很多地方共用某个组件的时候使用下面的形式 Vue.component('xxxx','xxxxxx');
+Vue.component('app-footer',require('./components/common/FooterComponent'));
 
 Vue.use(VueRouter);
 
@@ -25,5 +30,8 @@ Vue.use(VueRouter);
 
 const app = new Vue({
     el : '#app',
+    components : {
+        AppHeader
+    },
     router : router
 })

@@ -31,9 +31,8 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <p>本系统由Laravel Framework & Vue & Bootstarp3强力驱动 © 2018 Wechat : xingmaogou.</p>
-        </footer>
+        <!--公共底部-->
+        <app-footer></app-footer>
     </div>
 
 </template>

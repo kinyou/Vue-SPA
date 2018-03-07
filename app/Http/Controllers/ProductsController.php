@@ -12,7 +12,7 @@ class ProductsController extends Controller
 	 * @return mixed
 	 */
     public function index(){
-    	return Product::paginate(30);
+    	return Product::paginate();
     }
 
 	/**
