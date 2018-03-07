@@ -40,14 +40,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Index Component mounted.')
-            axios.get('/api/products')
-                 .then(response=>{
-                     console.log(response.data);
-                 })
-                .catch(response=>{
-                    console.log('error')
-                })
+            console.log('Index Component mounted.');
         }
     }
 </script>
