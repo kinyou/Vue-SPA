@@ -26,6 +26,8 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
+                    <li><router-link to="/register">注册</router-link></li>
+
 
                     <li class="dropdown">
                         <router-link to="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">

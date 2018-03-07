@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/products','ProductsController@index');
 Route::get('/products/{id}','ProductsController@show')->where(['id'=>'[0-9]+']);
+
+Route::post('/register','Auth\RegisterController@register');

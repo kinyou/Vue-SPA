@@ -17,6 +17,10 @@ let routes = [
         path : '/products/:productId',
         name:'detail',
         component : require('./components/products/DetailComponent')
+    },
+    {
+        path : '/register',
+        component : require('./components/registers/RegisterComponent')
     }
 ];
 
