@@ -8,4 +8,5 @@
     - 使用npm run watch实时编译
     - 简单流程分析
         - webpack使用webpack.mix.js后规定js和css编译后的目录-->app.js-->bootstrap.js-->routes.js
-    - 注意点使用vue-router的时候必须用<route-view></route-view>占位
+    - 注意点使用vue-router的时候必须用<router-view></router-view>占位
+    - 注意点使用vue-router的时候用必须使用<router-link></router-link>生成超链接a
