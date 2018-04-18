@@ -5,8 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+//导入bootstarp.js
 require('./bootstrap');
 
+//全局注册vue
 window.Vue = require('vue');
 
 //导入vue-router
@@ -18,6 +20,7 @@ import AppHeader from './components/common/NavbarComponent'
 //有很多地方共用某个组件的时候使用下面的形式 Vue.component('xxxx','xxxxxx');
 Vue.component('app-footer',require('./components/common/FooterComponent'));
 
+//告诉vue使用vueRouter组件
 Vue.use(VueRouter);
 
 /**
