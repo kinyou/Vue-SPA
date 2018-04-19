@@ -31,8 +31,8 @@
             </div>
         </div>
 
-        <!--公共底部-->
-        <app-footer></app-footer>
+        <!--&lt;!&ndash;公共底部&ndash;&gt;-->
+        <!--<app-footer></app-footer>-->
     </div>
 
 </template>

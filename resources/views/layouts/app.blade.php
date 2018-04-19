@@ -16,8 +16,13 @@
 <body>
 <div id="app">
     <!--公共的导航条-->
-    <app-header></app-header>
+    <nav-bar></nav-bar>
+
+    <!--vue-router组件的模板渲染占位符-->
     <router-view></router-view>
+
+    <!--尾部-->
+    <app-footer></app-footer>
 </div>
 
 <!-- Scripts -->

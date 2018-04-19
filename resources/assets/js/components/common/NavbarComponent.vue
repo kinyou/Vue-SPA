@@ -53,7 +53,6 @@
 
 <script>
     export default {
-        name : 'app-header',
         mounted() {
             console.log('Component mounted.')
         }

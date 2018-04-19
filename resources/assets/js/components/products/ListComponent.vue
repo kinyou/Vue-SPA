@@ -17,7 +17,7 @@
         </div>
 
         <!--注册的组件必须包括在一个大的div中,不然渲染的时候会报错-->
-        <app-footer></app-footer>
+        <!--<app-footer></app-footer>-->
     </div>
 </template>
 
