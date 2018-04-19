@@ -1,4 +1,4 @@
-##初始化项目
+## 初始化项目
 * 使用composer创建基于laravel5.5的项目
     * composer create-project laravel/laravel laravel-cms --prefer-dist "5.5.*"
 * 安装前端依赖
