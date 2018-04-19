@@ -28,7 +28,6 @@
             axios.get('/api/products/' + this.$route.params.productId )
                 .then(response=>{
                     this.product = response.data;
-                    console.log(this.product);
                 })
                 .catch(response=>{
                     console.log('error')

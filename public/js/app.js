@@ -3702,7 +3702,7 @@ if (inBrowser && window.Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(65);
+module.exports = __webpack_require__(62);
 
 
 /***/ }),
@@ -3713,9 +3713,9 @@ module.exports = __webpack_require__(65);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__routes__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_common_NavbarComponent_vue__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_common_NavbarComponent_vue__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_common_NavbarComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_common_NavbarComponent_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_FooterComponent_vue__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_FooterComponent_vue__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_common_FooterComponent_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_common_FooterComponent_vue__);
 
 /**
@@ -46115,7 +46115,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios.get('/api/products').then(function (response) {
             _this.products = response.data.data;
-            console.log(_this.products);
         }).catch(function (response) {
             console.log('error');
         });
@@ -46273,7 +46272,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         axios.get('/api/products/' + this.$route.params.productId).then(function (response) {
             _this.product = response.data;
-            console.log(_this.product);
         }).catch(function (response) {
             console.log('error');
         });
@@ -46450,7 +46448,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
+        console.log('register Component mounted.');
     },
     data: function data() {
         //设置绑定的初始默认值
@@ -46691,17 +46689,15 @@ if (false) {
 }
 
 /***/ }),
-/* 56 */,
-/* 57 */,
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(59)
+var __vue_script__ = __webpack_require__(57)
 /* template */
-var __vue_template__ = __webpack_require__(60)
+var __vue_template__ = __webpack_require__(58)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -46740,7 +46736,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46801,12 +46797,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
+        console.log('navbar Component mounted.');
     }
 });
 
 /***/ }),
-/* 60 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -46960,15 +46956,15 @@ if (false) {
 }
 
 /***/ }),
-/* 61 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(62)
+var __vue_script__ = __webpack_require__(60)
 /* template */
-var __vue_template__ = __webpack_require__(63)
+var __vue_template__ = __webpack_require__(61)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -47007,7 +47003,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 62 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47021,12 +47017,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
-        console.log('Component mounted.');
+        console.log('footer Component mounted.');
     }
 });
 
 /***/ }),
-/* 63 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47059,8 +47055,7 @@ if (false) {
 }
 
 /***/ }),
-/* 64 */,
-/* 65 */
+/* 62 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

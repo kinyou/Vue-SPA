@@ -58,7 +58,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('register Component mounted.')
         },
         data(){
             //设置绑定的初始默认值

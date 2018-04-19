@@ -29,7 +29,6 @@
             axios.get('/api/products')
                 .then(response=>{
                     this.products = response.data.data;
-                    console.log(this.products);
                 })
                 .catch(response=>{
                     console.log('error')
